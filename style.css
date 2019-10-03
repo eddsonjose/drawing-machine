@@ -2,6 +2,25 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+H1 {
+  text-align: center;
+}
+
+P {
+  margin: 0;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
 canvas {
-  display: block;
+  margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }

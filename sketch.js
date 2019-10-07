@@ -2,17 +2,13 @@ let strokeSize = 0.01;
 let circleSize = 2;
 let noiseValue = 0.0;
 let bigBang = 0;
-
-
+//------------------------------------------------------------------
 function setup() {
   createCanvas(windowWidth*0.9, windowHeight*0.8);
   background(0);
 }
 //------------------------------------------------------------------
 function draw() {
-
-  // frameRate(1);
-
   let n = noise(noiseValue) * width;
   noiseValue += 0.1;
   if (noiseValue >= 1) {
@@ -25,7 +21,7 @@ function draw() {
     line(width - mouseX, height - mouseY, pmouseX, pmouseY);
     strokeWeight(strokeSize);
     line(mouseX, mouseY, pmouseX, pmouseY);
-    strokeWeight(0.01);
+    // strokeWeight(0.01);
     // fill(0, 0, 0, 0)
     // ellipse(width/2, height/2, mouseX, mouseY);
     //large stars
@@ -40,7 +36,6 @@ function draw() {
   if (bigBang >= width*2) {
     bigBang = 0;
   }
-
 }
 //------------------------------------------------------------------
 function keyTyped() {

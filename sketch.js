@@ -1,3 +1,9 @@
+//Have your drawings connect to stars as you draw. Similar to a constellation.
+//Have a paragraph or change title to speak about the idea of "artificial is natural"
+//in terms of using it through the laptop.
+//How is the user's experience or interaction with the laptop/drawing related
+//to "artificial is natural."
+
 let strokeSize = 0.01;
 let circleSize = 2;
 let noiseValue = 0.0;
@@ -21,10 +27,9 @@ function draw() {
     line(width - mouseX, height - mouseY, pmouseX, pmouseY);
     strokeWeight(strokeSize);
     line(mouseX, mouseY, pmouseX, pmouseY);
-    // strokeWeight(0.01);
-    // fill(0, 0, 0, 0)
-    // ellipse(width/2, height/2, mouseX, mouseY);
-    //large stars
+    strokeWeight(0.01);//ellipse
+    fill(0, 0, 0, 0)//ellipse
+    ellipse(width/2, height/2, mouseX, mouseY);//ellipse
     noStroke();
     fill(random(150, 255), random(150, 255), random(150, 255));
     circle(width - mouseX + random(-n/8, n/8), height - mouseY + random(-n/8, n/8), random(1, circleSize));
@@ -41,7 +46,7 @@ function draw() {
 function keyTyped() {
   if (key === 's') {
     console.log("Image saved");
-    saveCanvas('fileName', 'png');
+    saveCanvas('WeAreStardust', 'png');
   }
   if (key === '=') {
     console.log("Stroke weight increased");
@@ -56,6 +61,13 @@ function keyTyped() {
   }
   if (key === 'r') {
     bigBang = 1;
+    strokeSize = 0.01;
+    circleSize = 2;
+  }
+  if (key === 'c') {
+    for (let i = 1; i < 2000; i++) {
+      circle(random(0, width), random(0, height), random(10, 20));
+    }
   }
   return false;
 }

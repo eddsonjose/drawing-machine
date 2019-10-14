@@ -1,7 +1,5 @@
-//How is the user's experience or interaction with the laptop/drawing related
-//to "artificial is natural."
-//connect imagination to universe/stars
-
+//Artificial is natural
+//by Eddson Jose
 let strokeSize = 3;
 let circleSize = 3;
 let bigBang = 0;
@@ -17,22 +15,15 @@ function setup() {
 }
 //------------------------------------------------------------------
 function draw() {
-  //stars and lines
+  //scrolling paragraph outside of canvas
   paragraph.size(9000, 15);
   paragraph.style('text-align:center');
-  paragraph.position(textXPos * 2.8, 68);
-
+  paragraph.position(textXPos * 3.2, 68);
+  //drawing stars and lines
   if (mouseIsPressed) {
     textXPos -= 5;
     strokeWeight(strokeSize);
     stroke(random(200, 255), random(200, 255), random(200, 255));
-    // line(width - mouseX, height - mouseY, pmouseX, pmouseY);
-    // strokeWeight(strokeSize);
-    // line(mouseX, mouseY, pmouseX, pmouseY);
-    // strokeWeight(0.01);//ellipse
-    // fill(0, 0, 0, 0)//ellipse
-    // ellipse(width/2, height/2, mouseX, mouseY);//ellipse
-    // line(beginXPos, beginYPos, lastXPos, lastYPos);
     line(mouseX, mouseY, pmouseX, pmouseY);
     noStroke();
     fill(random(150, 255), random(150, 255), random(150, 255));
@@ -46,15 +37,21 @@ function draw() {
   if (bigBang >= width*2) {
     bigBang = 0;
   }
-  //text
-  // rect(textXPos, 5, 1000, 25);
+  //scrolling paragraph inside the canvas
+  // rect(textXPos, 5, 9000, 25);
   // fill(255);
   // text('What humans percieve as artificial is truly natural in a universal outlook because everything in the universe is made up of the same material - stardust. The human body, the mind, and its creations are a product of nature. What is unnatural is simply another name for manmade. Gender is another construct of humanity. Many say that there is naturally only two genders and anything more is considered unnatural. I say let there be a thousand genders because what makes a gender is what makes a human and what makes a human is nature. Let us believe what we want, let us form the stars into shapes, and let us be who we desire to be. Keep drawing. Embellish it. Your drawing is what you believe in and your belief is natural.', textXPos, 20);
 }
 //------------------------------------------------------------------
+//form a star on mouse press
+function mousePressed() {
+  fill(random(200, 255), random(200, 255), random(200, 255));
+  circle(mouseX, mouseY, circleSize * 2);
+}
+//form a star on mouse release
 function mouseReleased() {
   fill(random(200, 255), random(200, 255), random(200, 255));
-  circle(mouseX, mouseY, 8);
+  circle(mouseX, mouseY, circleSize * 2);
 }
 function keyTyped() {
   if (key === 's') {
@@ -73,11 +70,15 @@ function keyTyped() {
     circleSize -= 1;
   }
   if (key === 'r') {
+    console.log("Canvas reset");
+    console.log(strokeSize);
     bigBang = 1;
     strokeSize = 3;
     circleSize = 3;
   }
   if (key === 'c') {
+    console.log("Stroke size reset");
+    console.log(strokeSize);
     strokeSize = 3;
     circleSize = 3;
   }

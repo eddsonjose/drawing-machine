@@ -9,7 +9,7 @@ let textXPos;
 let paragraph;
 //------------------------------------------------------------------
 function setup() {
-  paragraph = createElement('p', 'What humans percieve as artificial is truly natural in a universal outlook because everything in the universe is made up of the same material - stardust. The human body, the mind, and its creations are a product of nature. What is unnatural is simply another name for manmade; it is a way to differentiate humanity with its cohabitants on Earth. Gender is another construct of humanity. Many say that there is naturally only two genders and anything more is considered unnatural. I say let there be a thousand genders because what makes a gender is what makes a human and what makes a human is nature. Let us believe what we want, let us form the stars into shapes, and let us be who we desire to be.');
+  paragraph = createElement('p', 'What humans perceive as artificial is truly natural in a universal outlook because everything in the universe is made up of the same material – stardust. The human body, the mind, and its creations are a product of nature. What is unnatural is simply another name for man-made. Constellations are a human construct that we view as an object to believe in. Drawing with the stars will help change the scale of our perception of nature into the scale of the universe. Gender is another construct of humanity. Many say that there is naturally only two genders and anything more is considered unnatural. I say let there be a thousand genders because what makes a gender is what makes a human and what makes a human is nature. Let us believe what we want, let us form the stars into shapes, and let us be who we desire to be. Your drawing is what you believe in and your belief is natural.');
   createCanvas(windowWidth * 0.9, windowHeight * 0.8);
   background(0);
   frameRate(8);
@@ -18,7 +18,7 @@ function setup() {
 //------------------------------------------------------------------
 function draw() {
   //stars and lines
-  paragraph.size(5000, 15);
+  paragraph.size(9000, 15);
   paragraph.style('text-align:center');
   paragraph.position(textXPos * 2.8, 68);
 
@@ -49,7 +49,7 @@ function draw() {
   //text
   // rect(textXPos, 5, 1000, 25);
   // fill(255);
-  // text('What humans percieve as artificial is truly natural in a universal outlook because everything in the universe is made up of the same material - stardust. The human body, the mind, and its creations are a product of nature. What is unnatural is simply another name for manmade; it is a way to differentiate humanity with its cohabitants on Earth. Gender is another construct of humanity. Many say that there is naturally only two genders and anything more is considered unnatural. I say let there be a thousand genders because what makes a gender is what makes a human and what makes a human is nature. Let us believe what we want, let us form the stars into shapes, and let us be who we desire to be.', textXPos, 20);
+  // text('What humans percieve as artificial is truly natural in a universal outlook because everything in the universe is made up of the same material - stardust. The human body, the mind, and its creations are a product of nature. What is unnatural is simply another name for manmade. Gender is another construct of humanity. Many say that there is naturally only two genders and anything more is considered unnatural. I say let there be a thousand genders because what makes a gender is what makes a human and what makes a human is nature. Let us believe what we want, let us form the stars into shapes, and let us be who we desire to be. Keep drawing. Embellish it. Your drawing is what you believe in and your belief is natural.', textXPos, 20);
 }
 //------------------------------------------------------------------
 function mouseReleased() {

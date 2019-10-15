@@ -17,8 +17,8 @@ function setup() {
 function draw() {
   //scrolling paragraph outside of canvas
   paragraph.size(9000, 15);
-  paragraph.style('text-align:center');
-  paragraph.position(textXPos * 3.2, 68);
+  paragraph.style('text-align:right');
+  paragraph.position(textXPos * 2.1, 68);
   //drawing stars and lines
   if (mouseIsPressed) {
     textXPos -= 5;
